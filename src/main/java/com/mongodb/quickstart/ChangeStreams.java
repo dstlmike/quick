@@ -25,7 +25,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 public class ChangeStreams {
 
     public static void main(String[] args) {
-        ConnectionString connectionString = new ConnectionString(System.getProperty("mongodb+srv://gmgm:113hopest@cluster89278.oitd2c5.mongodb.net/sampledb?retryWrites=true&w=majority"));
+        ConnectionString connectionString = new ConnectionString(System.getProperty("mongodb+srv://gmgm:113hopest@cluster89278.oitd2c5.mongodb.net/?retryWrites=true&w=majority"));
         CodecRegistry pojoCodecRegistry = fromProviders(PojoCodecProvider.builder().automatic(true).build());
         CodecRegistry codecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), pojoCodecRegistry);
         MongoClientSettings clientSettings = MongoClientSettings.builder()
