@@ -21,7 +21,7 @@ public class Update {
     public static void main(String[] args) {
         JsonWriterSettings prettyPrint = JsonWriterSettings.builder().indent(true).build();
 
-        try (MongoClient mongoClient = MongoClients.create(System.getProperty(process.env.URI))) {
+        try (MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb.uri"))) {
             MongoDatabase sampleTrainingDB = mongoClient.getDatabase(process.env.SampleDB);
             MongoCollection<Document> gradesCollection = sampleTrainingDB.getCollection("grades");
 
