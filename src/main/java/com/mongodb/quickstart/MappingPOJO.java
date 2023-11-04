@@ -25,7 +25,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 public class MappingPOJO {
 
     public static void main(String[] args) {
-        ConnectionString connectionString = new ConnectionString(System.getProperty(process.env.URI));
+        ConnectionString connectionString = new ConnectionString(System.getProperty("mongodb.uri"));
         CodecRegistry pojoCodecRegistry = fromProviders(PojoCodecProvider.builder().automatic(true).build());
         CodecRegistry codecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), pojoCodecRegistry);
         MongoClientSettings clientSettings = MongoClientSettings.builder()
