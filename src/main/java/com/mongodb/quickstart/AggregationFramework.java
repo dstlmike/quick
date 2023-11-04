@@ -23,9 +23,9 @@ import static com.mongodb.client.model.Sorts.descending;
 public class AggregationFramework {
 
     public static void main(String[] args) {
-        String connectionString = System.getProperty("mongodb.uri");
+        String connectionString = System.getProperty(process.env.URI);
         try (MongoClient mongoClient = MongoClients.create(connectionString)) {
-            MongoDatabase db = mongoClient.getDatabase("sample_training");
+            MongoDatabase db = mongoClient.getDatabase(process.env.SampleDB);
             MongoCollection<Document> zips = db.getCollection("zips");
             MongoCollection<Document> posts = db.getCollection("posts");
             threeMostPopulatedCitiesInTexas(zips);
