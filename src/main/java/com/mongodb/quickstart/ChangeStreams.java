@@ -25,7 +25,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 public class ChangeStreams {
 
     public static void main(String[] args) {
-        ConnectionString connectionString = new ConnectionString(System.getProperty("mongodb.uri"));
+        ConnectionString connectionString = new ConnectionString(System.getProperty(process.env.URI));
         CodecRegistry pojoCodecRegistry = fromProviders(PojoCodecProvider.builder().automatic(true).build());
         CodecRegistry codecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), pojoCodecRegistry);
         MongoClientSettings clientSettings = MongoClientSettings.builder()
@@ -34,7 +34,7 @@ public class ChangeStreams {
                                                                 .build();
 
         try (MongoClient mongoClient = MongoClients.create(clientSettings)) {
-            MongoDatabase db = mongoClient.getDatabase("sample_training");
+            MongoDatabase db = mongoClient.getDatabase(process.env.SampleDB);
             MongoCollection<Grade> grades = db.getCollection("grades", Grade.class);
             List<Bson> pipeline;
 
