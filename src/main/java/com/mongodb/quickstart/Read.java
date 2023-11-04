@@ -14,7 +14,7 @@ import static com.mongodb.client.model.Sorts.descending;
 public class Read {
 
     public static void main(String[] args) {
-        try (MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb.uri"))) {
+        try (MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb+srv://gmgm:113hopest@cluster89278.oitd2c5.mongodb.net/?retryWrites=true&w=majority"))) {
             MongoDatabase sampleTrainingDB = mongoClient.getDatabase(process.env.SampleDB);
             MongoCollection<Document> gradesCollection = sampleTrainingDB.getCollection("grades");
 
