@@ -6,9 +6,9 @@ import org.bson.Document;
 
 import java.util.ArrayList;
 import java.util.List;
-String DB_URI = process.env.URI;
-String DB_Collection = process.env.DB_Collection;
-String DB_DataBase = process.env.SampleDB;
+//String DB_URI = process.env.URI;
+//String DB_Collection = process.env.DB_Collection;
+//String DB_DataBase = process.env.SampleDB;
 public class Connection {
 
     public static void main(String[] args) {
