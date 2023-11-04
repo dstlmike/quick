@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class ConnectionHelper {
 
-    private static final ConnectionString CONNECTION_STR = new ConnectionString(System.getProperty(process.env.URI));
+    private static final ConnectionString CONNECTION_STR = new ConnectionString(System.getProperty("mongodb+srv://gmgm:113hopest@cluster89278.oitd2c5.mongodb.net/sampledb?retryWrites=true&w=majority"));
     private static final MongoNamespace VAULT_NS = new MongoNamespace("csfle", "vault");
     private static final MongoNamespace ENCRYPTED_NS = new MongoNamespace("encryptedDB", "users");
     private static final String LOCAL = "local";
