@@ -6,8 +6,8 @@
 
     <groupId>com.mongodb</groupId>
     <artifactId>java-quick-start</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+   <!-- <version>1.0-SNAPSHOT</version> -->
+<version>${mongodb.version}</version>
          <parent>
                   <groupId>org.springframework.boot</groupId>
                   <artifactId>spring-boot-starter-parent</artifactId>
