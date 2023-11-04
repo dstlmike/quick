@@ -6,7 +6,7 @@
 
          <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
-            <version>4.8.1</version> <!--${mongodb-driver-sync.version}</version>-->
+            <version>3.8.0</version> <!--${mongodb-driver-sync.version}</version>-->
                                                             
   <!-- <groupId>com.mongodb</groupId>
     <artifactId>mongo-java-driver</artifactId>
