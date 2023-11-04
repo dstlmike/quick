@@ -14,10 +14,10 @@ public class QuickStart {
         String uri = "mongodb+srv://gmgm:113hopest@cluster89278.oitd2c5.mongodb.net/?retryWrites=true&w=majority";
 
         try (MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("sample_mflix");
-            MongoCollection<Document> collection = database.getCollection("movies");
+            MongoDatabase database = mongoClient.getDatabase("sampledb");
+            MongoCollection<Document> collection = database.getCollection("checkCmds");
 
-            Document doc = collection.find(eq("title", "Back to the Future")).first();
+            Document doc = collection.find(eq("cmdName", "hello")).first();
             if (doc != null) {
                 System.out.println(doc.toJson());
             } else {
