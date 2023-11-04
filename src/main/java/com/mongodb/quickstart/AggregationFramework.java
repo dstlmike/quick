@@ -23,7 +23,7 @@ import static com.mongodb.client.model.Sorts.descending;
 public class AggregationFramework {
 
     public static void main(String[] args) {
-        String connectionString = System.getProperty(process.env.URI);
+        String connectionString = System.getProperty("mongo.uri");
         try (MongoClient mongoClient = MongoClients.create(connectionString)) {
             MongoDatabase db = mongoClient.getDatabase(process.env.SampleDB);
             MongoCollection<Document> zips = db.getCollection("zips");
