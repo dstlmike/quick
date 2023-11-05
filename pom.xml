@@ -8,7 +8,7 @@
             <artifactId>mongodb-driver-sync</artifactId>
             <version>3.8.0</version> //${mongodb-driver-sync.version}</version>
          -->                                                   
-   <groupId>com.mongodb</groupId>
+   <groupId>com.mongodb.quickstart</groupId>
     <artifactId>mongo-java-driver</artifactId>
 <!-- <version>1.0-SNAPSHOT</version> -->
 <version>3.8.0</version> 
