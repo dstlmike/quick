@@ -2,7 +2,7 @@ package com.mongodb.quickstart;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
-import com.mongodb.client.*;
+//import com.mongodb.client.*;
 import com.mongodb.client.model.changestream.ChangeStreamDocument;
 import com.mongodb.quickstart.models.Grade;
 import org.bson.BsonDocument;
